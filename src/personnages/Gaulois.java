@@ -48,6 +48,7 @@ public class Gaulois {
 		idefix.prendreParole();
 		idefix.parler("WOUAF WOUAF !");
 		
+		
 		idefix.boirePotion(3);
 		
 		idefix.frapper(new Romain("soldatouris",100));
