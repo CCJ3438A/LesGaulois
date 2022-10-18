@@ -8,8 +8,7 @@ public class Village {
 
 	public Village(String nom, int nbVillageoisMaximum) {
 		this.nom = nom;
-		this.nbVillageois = nbVillageoisMaximum;
-		this.villageois = new Gaulois[this.nbVillageois];
+		this.villageois = new Gaulois[nbVillageoisMaximum];
 	}
 
 	public void setChef(Chef chef) {
@@ -24,4 +23,14 @@ public class Village {
 		this.villageois[this.nbVillageois] = gau;
 		this.nbVillageois++;
 	}
+
+	public Gaulois trouverHabitant(int numVillageois) {
+		return this.villageois[numVillageois];
+	}
+
+	public static void main(String[] args) {
+		Village village = new Village("Village des Irréductibles", 30);
+		/* Gaulois gaulois = village.trouverHabitant(30); */
+	}
+
 }
