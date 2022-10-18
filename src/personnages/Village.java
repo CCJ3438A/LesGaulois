@@ -30,6 +30,13 @@ public class Village {
 		return this.villageois[numVillageois - 1];
 	}
 
+	public void afficherVillageois() {
+		System.out.println("Dans le village du chef " + this.chef + " vivent les légendaires gaulois :");
+		for (int i = 0; i < this.nbVillageois; i++) {
+			System.out.println("- " + this.trouverHabitant(i).getNom());
+		}
+	}
+
 	/**
 	 * @param args
 	 */
