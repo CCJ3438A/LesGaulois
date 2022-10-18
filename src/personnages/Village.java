@@ -20,17 +20,37 @@ public class Village {
 	}
 
 	public void ajouterHabitant(Gaulois gau) {
+		// if (this.nbVillageois < this.villageois.length) {
 		this.villageois[this.nbVillageois] = gau;
 		this.nbVillageois++;
+		// }
 	}
 
 	public Gaulois trouverHabitant(int numVillageois) {
-		return this.villageois[numVillageois];
+		return this.villageois[numVillageois - 1];
 	}
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Village village = new Village("Village des Irréductibles", 30);
-		/* Gaulois gaulois = village.trouverHabitant(30); */
-	}
+		/*
+		 * Gaulois gaulois = village.trouverHabitant(30);
+		 * 
+		 * Car il n'y a pas 31 villageois mais 30, alors des villageois de numéro 0 à 29
+		 */
+		Chef abraracourcix = new Chef("Abraracourcix", 6, village);
+		Gaulois asterix = new Gaulois("Astérix", 8);
 
+		village.setChef(abraracourcix);
+		village.ajouterHabitant(asterix);
+		/*
+		 * Gaulois gaulois = village.trouverHabitant(1); System.out.println(gaulois);
+		 */
+		/*
+		 * Ce qui est affiché sont les informations du vallageois numéro 1 (indice 0),
+		 * ici Astérix
+		 */
+	}
 }
