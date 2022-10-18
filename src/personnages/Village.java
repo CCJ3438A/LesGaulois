@@ -31,9 +31,9 @@ public class Village {
 	}
 
 	public void afficherVillageois() {
-		System.out.println("Dans le village du chef " + this.chef + " vivent les légendaires gaulois :");
+		System.out.println("Dans le village du chef " + this.chef.getNom() + " vivent les légendaires gaulois :");
 		for (int i = 0; i < this.nbVillageois; i++) {
-			System.out.println("- " + this.trouverHabitant(i).getNom());
+			System.out.println("- " + this.trouverHabitant(i + 1).getNom());
 		}
 	}
 
@@ -49,9 +49,12 @@ public class Village {
 		 */
 		Chef abraracourcix = new Chef("Abraracourcix", 6, village);
 		Gaulois asterix = new Gaulois("Astérix", 8);
+		Gaulois obelix = new Gaulois("Obélix", 25);
 
 		village.setChef(abraracourcix);
 		village.ajouterHabitant(asterix);
+		village.ajouterHabitant(obelix);
+		village.afficherVillageois();
 		/*
 		 * Gaulois gaulois = village.trouverHabitant(1); System.out.println(gaulois);
 		 */
