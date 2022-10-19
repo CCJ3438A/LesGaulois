@@ -41,5 +41,10 @@ public class Romain {
 		soldatouris2.prendreParole();
 		soldatouris2.parler("EN GAAAAAAAAAAAAAAAAARRRRDE !");
 		soldatouris2.recevoirCoup(100);
+
+		Equipement eq = Equipement.BOUCLIER;
+		Equipement eq2 = Equipement.CASQUE;
+
+		System.out.println(eq + "\n" + eq2);
 	}
 }
