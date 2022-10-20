@@ -11,7 +11,6 @@ public enum Equipement {
 
 	@Override
 	public String toString() {
-		System.out.println(this.nom);
 		return this.nom;
 	}
 }
